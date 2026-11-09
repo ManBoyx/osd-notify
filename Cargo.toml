@@ -1,0 +1,14 @@
+[package]
+name = "osd-notify"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true
+panic = "abort"
+
+[dependencies]
+smithay-client-toolkit = { version = "0.19", default-features = false, features = ["calloop"] }
+ab_glyph = "0.2"
